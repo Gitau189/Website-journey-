@@ -1,0 +1,27 @@
+body{
+    background-image:url("https://miro.medium.com/v2/resize:fit:1400/1*tXHk0132W5359Dlste6ieg.jpeg");
+
+}
+
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+
+.container{
+    background-color: burlywood;
+
+    width: 100%;
+    margin: 0%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: auto;
+    
+
+}
+table{
+    width: 100%;
+}
+    
