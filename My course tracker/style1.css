@@ -1,14 +1,72 @@
 
 body{
-    background-image:url("https://www.coventry.ac.uk/globalassets/media/global/00-new-course-imagery/engineering-environment-and-computing/ug/data-science-new-banner.jpg");
-
-    animation: slide 50s linear infinite;
+    background: #000 none repeat scroll 0 0;
+	color: #999;
+	font-size: 100%;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
-@keyframes slide {
-    0% { background-position: 0 0; }
-    100% { background-position: -100% 0; }
+.heart-rate{
+	width: 150px;
+	height: 73px;
+	position: relative;
+	margin: 20px auto;
+}
+
+.fade-in{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: 0;
+animation: heartRateIn 2.5s linear infinite;
+}
+
+.fade-out{
+position: absolute;
+width: 120%;
+height: 100%;
+background-color: #000;
+top: 0;
+right: -120%;
+animation: heartRateOut 2.5s linear infinite;
+background: rgba(0, 0, 0, 1);
+background: linear-gradient(to right,rgba(0,0,0,1)0%, rgba(0,0,0,1)80%,rgba(0,0,0,0)100%);
+}
+
+@keyframes heartRateIn{
+	0%{
+		width: 100%;
+	}
+	50%{
+		width: 0;
+	}
+	100%{
+		width: 0;
+	}
+}
+@keyframes heartRateOut{
+	0%{
+		left: -120%;
+	}
+	30%{
+		left: -120%;
+	}
+	100%{
+		left: 0;
+	}
+
 }
 h1,h2{
     text-align: center;
@@ -52,15 +110,4 @@ input[id="usname"] input[id="password"]{
     max-width: 500px;
     position: relative;
     overflow: hidden;
-}
-.login::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 8px 8px rgb(194, 216, 240);
-    filter: blur(10px);
-    pointer-events: none;  /* To prevent this style from interfering with the functionality */
 }
